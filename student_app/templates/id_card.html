@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="text-end m-4">
+    <a href="{% url 'logout' %}" class="btn btn-danger">Logout</a>
+</div>
+<div class="id-card">
+    <img src="{{ student.image.url }}" alt="Student Photo" class="student-image mb-4">
+    <div class="text-center mb-4">
+        <h3>{{ student.college_name }}</h3>
+        <h4>Student ID Card</h4>
+    </div>
+    <div class="row g-3">
+        <div class="col-6">
+            <strong>Name:</strong>
+        </div>
+        <div class="col-6">
+            {{ student.full_name }}
+        </div>
+        <div class="col-6">
+            <strong>Age:</strong>
+        </div>
+        <div class="col-6">
+            {{ student.age }}
+        </div>
+        <div class="col-6">
+            <strong>Date of Birth:</strong>
+        </div>
+        <div class="col-6">
+            {{ student.dob }}
+        </div>
+        <div class="col-6">
+            <strong>Place:</strong>
+        </div>
+        <div class="col-6">
+            {{ student.place }}
+        </div>
+        <div class="col-6">
+            <strong>Blood Group:</strong>
+        </div>
+        <div class="col-6">
+            {{ student.blood_group }}
+        </div>
+    </div>
+</div>
+{% endblock %}
